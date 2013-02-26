@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tracker Nag Blocker",
+  "description": "Dismiss the you-are-behind-on-hours dialog",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs", "https://www.pivotaltracker.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.pivotaltracker.com/*"],
+      "js": ["blocker.js"]
+    }
+  ]
+}
